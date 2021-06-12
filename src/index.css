@@ -22,6 +22,8 @@ code {
 }
 
 
+
+
 .notes-list{
   display: grid;
   grid-gap: 1rem;
@@ -62,10 +64,18 @@ textarea:focus{
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
+  white-space: pre-wrap;
+}
+.note p{
+  overflow-wrap: break-word;
 }
 
 .note-footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.delete-icon{
+  cursor:pointer;
 }
