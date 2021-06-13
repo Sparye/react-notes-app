@@ -38,6 +38,16 @@ const App = () => {
     localStorage.setItem("react-notes-app-data", JSON.stringify(notes));
   }, [notes]);
 
+  useEffect(() => {
+    const mode = localStorage.getItem("dark-mode");
+    var isTrueSet = mode === "true";
+    setDarkMode(isTrueSet);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("dark-mode", darkMode);
+  }, [darkMode]);
+
   //   useEffect(() => {
   //     const savedNotes = JSON.parse(localStorage.getItem("react-notes-app-data"));
 
